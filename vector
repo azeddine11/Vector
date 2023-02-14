@@ -1,0 +1,60 @@
+// PROC1 : DOT PRODUCT
+
+var V1 : ARRAY_OF INTEGER[]
+    V2 : ARRAY_OF INTEGER[]
+    i : INTEGER;
+BEGIN
+
+write('enter value of V1')
+write('enter value of V2 ')
+
+PROCEDURE dot_product (V1, V2, Var ps:INTEGER := 0)
+  FOR i = 0 TO n-1 DO
+    read(V1)
+  END FOR
+
+  FOR i = 0 TO n-1 DO 
+    read(V2)
+  END FOR
+
+  FOR i = 0 TO n-1
+    ps = ps + (V1[i] * V2[i])
+  END FOR
+END PROCEDURE
+END
+
+
+
+
+
+// PROC2 : ORTHOGONAL 
+
+var V1 : ARRAY_OF INTEGER[]
+    V2 : ARRAY_OF INTEGER[]
+    i,j,n: INTEGER;
+    orthogonal : Boolean
+     
+BEGIN
+
+write('enter value of V1')
+read(V1)
+write('enter value of V2 ')
+read(V2)
+write('enter number')
+read(n)
+
+PROCEDURE is_orthogonal (V1, V2, n)
+
+  SET orthogonal = TRUE
+    WHILE(i < length(n))
+      FOR j = 0 TO n-1
+          CALL dot_product (V1, V2, ps:INTEGER := 0)
+            IF ps ≠ 0
+              SET orthogonal = FALSE
+            END IF
+      END FOR
+      i++
+    END WHILE
+  RETURN orthogonal
+END PROCEDURE
+END
